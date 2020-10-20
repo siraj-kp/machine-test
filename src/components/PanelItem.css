@@ -1,0 +1,45 @@
+.panelItem {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.panelItem__info {
+  width: 60%;
+}
+
+.panelItem__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 30px;
+  width: 120px;
+  background-color: rgb(12, 150, 58);
+  margin-top: 20px;
+}
+
+.panelItem__button span {
+  color: #fff;
+}
+
+.panelItem__button button {
+  background-color: rgb(12, 150, 58);
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  outline: none;
+}
+
+.panelItem img {
+  width: 200px;
+  height: 200px;
+}
+
+.panelItem__custom {
+  color: red;
+  margin-top: 10px;
+}
