@@ -10,11 +10,11 @@ import { faArrowLeft, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { useStateValue } from "./StateProvider";
 
 function FoodItems(props) {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
   return (
     <div>
-      {props.items.map((item) => (
-        <div className="foodItem">
+      {props.items.map((item, index) => (
+        <div key={index} className="foodItem">
           <div className="foodItem__topbar">
             <FontAwesomeIcon icon={faArrowLeft} />
             <h3>{item.restaurant_name}</h3>
@@ -30,8 +30,8 @@ function FoodItems(props) {
           <div className="tab">
             <Tabs>
               <TabList>
-                {item.table_menu_list.map((menu) => (
-                  <Tab>
+                {item.table_menu_list.map((menu, index) => (
+                  <Tab key={index}>
                     <TabItem
                       key={menu.menu_category_id}
                       id={menu.menu_category_id}
@@ -44,7 +44,7 @@ function FoodItems(props) {
                 ))}
               </TabList>
               {item.table_menu_list.map((menu) => (
-                <div>
+                <div key={menu.menu_category_id}>
                   <TabPanel>
                     {menu.category_dishes.map((dishes) => (
                       <PanelItem

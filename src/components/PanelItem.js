@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./PanelItem.css";
 import { useStateValue } from "./StateProvider";
@@ -47,7 +47,7 @@ function PanelItem({ id, name, price, description, calorie, image, addonCat }) {
             <button onClick={addToBasket}>+</button>
           </div>
           {addonCat.length !== 0 && (
-            <Link>
+            <Link to="/">
               <div className="panelItem__custom">
                 <p>Cutomization available</p>
               </div>

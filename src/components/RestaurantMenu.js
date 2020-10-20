@@ -4,7 +4,7 @@ import FoodItems from "./FoodItems";
 
 function RestaurantMenu() {
   const [loadedItems, setLoadedItems] = useState();
-  const { isLoading, error, sendRequest, clearError } = useHttpClient();
+  const { isLoading, sendRequest } = useHttpClient();
   useEffect(() => {
     const fetchPlaces = async () => {
       try {
