@@ -43,3 +43,13 @@
   color: red;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .panelItem img {
+    width: 150px;
+    height: 150px;
+  }
+  .panelItem__info {
+    width: 50%;
+  }
+}
