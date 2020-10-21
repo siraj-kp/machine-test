@@ -4,7 +4,7 @@ import "./PanelItem.css";
 import { useStateValue } from "./StateProvider";
 
 function PanelItem({ id, name, price, description, calorie, image, addonCat }) {
-  const [{ basket }, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
   const initialState = 0;
   const [count, setCount] = useState(initialState);
 
