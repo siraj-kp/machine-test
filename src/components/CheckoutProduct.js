@@ -29,6 +29,7 @@ function CheckoutProduct({
         image: image,
       },
     });
+
     setCount((prevCount) => prevCount + 1);
   };
 
@@ -38,7 +39,7 @@ function CheckoutProduct({
       id: id,
     });
 
-    if (count !== initialState) {
+    if (count !== 0) {
       setCount((prevCount) => prevCount - 1);
     }
   };

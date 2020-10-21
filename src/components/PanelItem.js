@@ -5,7 +5,7 @@ import { useStateValue } from "./StateProvider";
 
 function PanelItem({ id, name, price, description, calorie, image, addonCat }) {
   const [{ basket }, dispatch] = useStateValue();
-  const initialState = basket?.length;
+  const initialState = 0;
   const [count, setCount] = useState(initialState);
 
   const addToBasket = () => {
@@ -29,7 +29,7 @@ function PanelItem({ id, name, price, description, calorie, image, addonCat }) {
       id: id,
     });
 
-    if (count !== initialState) {
+    if (count !== 0) {
       setCount((prevCount) => prevCount - 1);
     }
   };
